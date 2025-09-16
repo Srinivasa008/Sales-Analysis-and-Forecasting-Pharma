@@ -581,7 +581,7 @@ def apply_custom_css():
     
     /* Fix section header text */
     .section-header {
-        color: #000000 !important;
+        color: #ffffff !important;
         font-weight: 700 !important;
         background: transparent !important;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.3) !important;
@@ -654,13 +654,13 @@ def apply_custom_css():
     
     /* Fix section indicator text */
     .metric-card h3 {
-        color: #000000 !important;
+        color: #ffffff !important;
         font-weight: 700 !important;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.3) !important;
     }
     
     .metric-card p {
-        color: #000000 !important;
+        color: #ffffff !important;
         font-weight: 500 !important;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.2) !important;
     }
@@ -868,7 +868,7 @@ def apply_custom_css():
     
     
     .stSubheader {
-        color: #000000 !important;
+        color: #ffffff !important;
         font-weight: 700 !important;
     }
     
@@ -879,7 +879,7 @@ def apply_custom_css():
     .stMarkdown h4,
     .stMarkdown h5,
     .stMarkdown h6 {
-        color: #000000 !important;
+        color: #ffffff !important;
         font-weight: 700 !important;
     }
     
