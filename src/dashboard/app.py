@@ -860,15 +860,25 @@ def apply_custom_css():
         font-weight: 500 !important;
     }
     
-    /* Ensure all section headings are white */
-    h1, h2, h3, h4, h5, h6 {
-        color: #ffffff !important;
+    /* Ensure all section headings in main content are black */
+    .main .block-container h1,
+    .main .block-container h2,
+    .main .block-container h3,
+    .main .block-container h4,
+    .main .block-container h5,
+    .main .block-container h6,
+    .stApp h1,
+    .stApp h2,
+    .stApp h3,
+    .stApp h4,
+    .stApp h5,
+    .stApp h6 {
+        color: #000000 !important;
         font-weight: 700 !important;
     }
     
-    
     .stSubheader {
-        color: #ffffff !important;
+        color: #000000 !important;
         font-weight: 700 !important;
     }
     
@@ -881,6 +891,37 @@ def apply_custom_css():
     .stMarkdown h6 {
         color: #000000 !important;
         font-weight: 700 !important;
+    }
+    
+    /* Ensure Streamlit's default headings are visible */
+    .element-container h1,
+    .element-container h2,
+    .element-container h3,
+    .element-container h4,
+    .element-container h5,
+    .element-container h6 {
+        color: #000000 !important;
+        font-weight: 700 !important;
+    }
+    
+    /* Fix any remaining heading visibility issues */
+    div[data-testid="stMarkdownContainer"] h1,
+    div[data-testid="stMarkdownContainer"] h2,
+    div[data-testid="stMarkdownContainer"] h3,
+    div[data-testid="stMarkdownContainer"] h4,
+    div[data-testid="stMarkdownContainer"] h5,
+    div[data-testid="stMarkdownContainer"] h6 {
+        color: #000000 !important;
+        font-weight: 700 !important;
+    }
+    
+    /* Ensure all text in main content area is visible */
+    .main .block-container {
+        color: #000000 !important;
+    }
+    
+    .main .block-container * {
+        color: inherit !important;
     }
     
     </style>
@@ -1070,8 +1111,8 @@ with st.sidebar:
 # Enhanced header with gradient background
 st.markdown("""
 <div class="main-header">
-    <h1 style="color: white !important; font-size: 3rem !important; font-weight: 700 !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important; margin: 0 !important; -webkit-text-fill-color: white !important;">🏥 Pharma Sales Forecasting & Inventory Planning</h1>
-    <p style="color: #ffffff !important; font-size: 1.2rem !important; margin: 0.5rem 0 0 0 !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important;">Advanced AI-Powered Pharmaceutical Sales Analytics & Smart Inventory Management</p>
+    <h1 style="color: white !important;">🏥 Pharma Sales Forecasting & Inventory Planning</h1>
+    <p>Advanced AI-Powered Pharmaceutical Sales Analytics & Smart Inventory Management</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -1095,10 +1136,10 @@ section_names = {
 current_section = st.session_state.get('current_section', 'overview')
 st.markdown(f"""
 <div class="metric-card" style="margin-bottom: 2rem; text-align: center;">
-    <h3 style="color: #ffffff; margin: 0; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+    <h3 style="color: #000000; margin: 0; font-weight: 700; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
         {section_icons.get(current_section, '📊')} {section_names.get(current_section, 'Dashboard Overview')}
     </h3>
-    <p style="color: #ffffff; margin: 0.5rem 0 0 0; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">Currently viewing: {current_section.title()} section</p>
+    <p style="color: #000000; margin: 0.5rem 0 0 0; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">Currently viewing: {current_section.title()} section</p>
 </div>
 """, unsafe_allow_html=True)
 
