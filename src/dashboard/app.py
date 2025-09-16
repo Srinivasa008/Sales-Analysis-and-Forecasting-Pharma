@@ -860,17 +860,12 @@ def apply_custom_css():
         font-weight: 500 !important;
     }
     
-    /* Ensure all section headings are black */
+    /* Ensure all section headings are white */
     h1, h2, h3, h4, h5, h6 {
-        color: #000000 !important;
+        color: #ffffff !important;
         font-weight: 700 !important;
     }
     
-    /* Override main header h1 to be white */
-    .main-header h1 {
-        color: white !important;
-        -webkit-text-fill-color: white !important;
-    }
     
     .stSubheader {
         color: #000000 !important;
