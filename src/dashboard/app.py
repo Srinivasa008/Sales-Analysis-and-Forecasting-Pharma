@@ -20,31 +20,32 @@ def apply_custom_css():
     """Apply custom CSS for enhanced UI/UX"""
     st.markdown("""
     <style>
-    /* Modern appealing theme colors */
+    /* Beautiful modern theme colors */
     :root {
-        --primary-color: #4f46e5;
+        --primary-color: #2563eb;
         --secondary-color: #06b6d4;
         --success-color: #10b981;
         --warning-color: #f59e0b;
         --info-color: #8b5cf6;
         --light-bg: #f8fafc;
         --dark-bg: #1e293b;
-        --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        --gradient-bg-2: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%);
-        --gradient-bg-3: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        --gradient-bg: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        --gradient-bg-2: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+        --gradient-bg-3: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
         --gradient-bg-4: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #6366f1 100%);
         --gradient-bg-5: linear-gradient(135deg, #1e40af 0%, #3730a3 50%, #581c87 100%);
         --gradient-bg-6: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        --gradient-bg-7: linear-gradient(135deg, #1e3a8a 0%, #312e81 50%, #581c87 100%);
         --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         --hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        --glow-effect: 0 0 30px rgba(79, 70, 229, 0.4);
+        --glow-effect: 0 0 30px rgba(59, 130, 246, 0.4);
         --glass-effect: rgba(255, 255, 255, 0.95);
         --backdrop-blur: blur(15px);
     }
     
     /* Main app background */
     .main .block-container {
-        background: var(--gradient-bg-6);
+        background: var(--gradient-bg-3);
         min-height: 100vh;
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -52,12 +53,12 @@ def apply_custom_css():
     
     /* Styling for the main content area */
     .stApp {
-        background: var(--gradient-bg-6);
+        background: var(--gradient-bg-3);
     }
     
     /* Enhanced header styling */
     .main-header {
-        background: var(--gradient-bg-2);
+        background: var(--gradient-bg-7);
         padding: 3rem 1rem;
         border-radius: 25px;
         margin-bottom: 2rem;
@@ -67,7 +68,7 @@ def apply_custom_css():
         position: relative;
         overflow: hidden;
         animation: slideInDown 1s ease-out;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.1);
     }
     
     .main-header::before {
@@ -77,8 +78,8 @@ def apply_custom_css():
         left: 0;
         right: 0;
         bottom: 0;
-        background: var(--gradient-bg-4);
-        opacity: 0.15;
+        background: var(--gradient-bg-2);
+        opacity: 0.2;
         animation: shimmer 3s infinite;
     }
     
@@ -104,11 +105,11 @@ def apply_custom_css():
     /* Glow animation for heading */
     @keyframes glow {
         from { 
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 15px rgba(79, 70, 229, 0.4);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 15px rgba(59, 130, 246, 0.4);
             transform: scale(1);
         }
         to { 
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 25px rgba(79, 70, 229, 0.8), 0 0 35px rgba(124, 58, 237, 0.6);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 25px rgba(59, 130, 246, 0.8), 0 0 35px rgba(99, 102, 241, 0.6);
             transform: scale(1.02);
         }
     }
