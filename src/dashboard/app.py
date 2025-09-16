@@ -1094,10 +1094,10 @@ section_names = {
 current_section = st.session_state.get('current_section', 'overview')
 st.markdown(f"""
 <div class="metric-card" style="margin-bottom: 2rem; text-align: center;">
-    <h3 style="color: #000000; margin: 0; font-weight: 700; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
+    <h3 style="color: #ffffff; margin: 0; font-weight: 700; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
         {section_icons.get(current_section, '📊')} {section_names.get(current_section, 'Dashboard Overview')}
     </h3>
-    <p style="color: #000000; margin: 0.5rem 0 0 0; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">Currently viewing: {current_section.title()} section</p>
+    <p style="color: #ffffff; margin: 0.5rem 0 0 0; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">Currently viewing: {current_section.title()} section</p>
 </div>
 """, unsafe_allow_html=True)
 
