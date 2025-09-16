@@ -20,30 +20,31 @@ def apply_custom_css():
     """Apply custom CSS for enhanced UI/UX"""
     st.markdown("""
     <style>
-    /* Main theme colors */
+    /* Modern appealing theme colors */
     :root {
-        --primary-color: #1f77b4;
-        --secondary-color: #ff7f0e;
-        --success-color: #2ca02c;
-        --warning-color: #d62728;
-        --info-color: #9467bd;
-        --light-bg: #f8f9fa;
-        --dark-bg: #2c3e50;
+        --primary-color: #4f46e5;
+        --secondary-color: #06b6d4;
+        --success-color: #10b981;
+        --warning-color: #f59e0b;
+        --info-color: #8b5cf6;
+        --light-bg: #f8fafc;
+        --dark-bg: #1e293b;
         --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        --gradient-bg-2: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        --gradient-bg-3: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        --gradient-bg-4: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        --gradient-bg-5: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        --hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        --glow-effect: 0 0 20px rgba(37, 99, 235, 0.3);
-        --glass-effect: rgba(255, 255, 255, 0.9);
-        --backdrop-blur: blur(10px);
+        --gradient-bg-2: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%);
+        --gradient-bg-3: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        --gradient-bg-4: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #6366f1 100%);
+        --gradient-bg-5: linear-gradient(135deg, #1e40af 0%, #3730a3 50%, #581c87 100%);
+        --gradient-bg-6: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        --hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        --glow-effect: 0 0 30px rgba(79, 70, 229, 0.4);
+        --glass-effect: rgba(255, 255, 255, 0.95);
+        --backdrop-blur: blur(15px);
     }
     
     /* Main app background */
     .main .block-container {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: var(--gradient-bg-6);
         min-height: 100vh;
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -51,14 +52,14 @@ def apply_custom_css():
     
     /* Styling for the main content area */
     .stApp {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: var(--gradient-bg-6);
     }
     
     /* Enhanced header styling */
     .main-header {
-        background: var(--gradient-bg-5);
+        background: var(--gradient-bg-2);
         padding: 3rem 1rem;
-        border-radius: 20px;
+        border-radius: 25px;
         margin-bottom: 2rem;
         box-shadow: var(--hover-shadow);
         text-align: center;
@@ -66,6 +67,7 @@ def apply_custom_css():
         position: relative;
         overflow: hidden;
         animation: slideInDown 1s ease-out;
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
     
     .main-header::before {
@@ -75,8 +77,8 @@ def apply_custom_css():
         left: 0;
         right: 0;
         bottom: 0;
-        background: var(--gradient-bg-2);
-        opacity: 0.1;
+        background: var(--gradient-bg-4);
+        opacity: 0.15;
         animation: shimmer 3s infinite;
     }
     
@@ -102,11 +104,11 @@ def apply_custom_css():
     /* Glow animation for heading */
     @keyframes glow {
         from { 
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 10px rgba(255,255,255,0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 15px rgba(79, 70, 229, 0.4);
             transform: scale(1);
         }
         to { 
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.6), 0 0 30px rgba(255,255,255,0.4);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3), 0 0 25px rgba(79, 70, 229, 0.8), 0 0 35px rgba(124, 58, 237, 0.6);
             transform: scale(1.02);
         }
     }
@@ -114,20 +116,20 @@ def apply_custom_css():
     
     /* Enhanced metric cards */
     .metric-card {
-        background: transparent;
+        background: var(--glass-effect);
         padding: 1.5rem;
-        border-radius: 15px;
-        box-shadow: none;
-        border: none;
+        border-radius: 20px;
+        box-shadow: var(--card-shadow);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         transition: all 0.3s ease;
         margin-bottom: 1rem;
-        backdrop-filter: none;
+        backdrop-filter: var(--backdrop-blur);
     }
     
     .metric-card:hover {
-        transform: translateY(-3px);
-        box-shadow: none;
-        background: transparent;
+        transform: translateY(-5px);
+        box-shadow: var(--hover-shadow);
+        background: rgba(255, 255, 255, 0.98);
     }
     
     .metric-value {
@@ -135,11 +137,12 @@ def apply_custom_css():
         font-weight: 700;
         color: var(--primary-color);
         margin: 0;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
     
     .metric-label {
         font-size: 1rem;
-        color: #555;
+        color: var(--dark-bg);
         margin: 0;
         text-transform: uppercase;
         letter-spacing: 2px;
@@ -149,16 +152,17 @@ def apply_custom_css():
     
     /* Enhanced section headers */
     .section-header {
-        background: transparent;
+        background: var(--gradient-bg-4);
         color: #ffffff;
         padding: 1.2rem 1.5rem;
-        border-radius: 12px;
+        border-radius: 15px;
         margin: 2rem 0 1rem 0;
         font-size: 1.5rem;
         font-weight: 700;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        border: none;
-        backdrop-filter: none;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: var(--backdrop-blur);
+        box-shadow: var(--card-shadow);
     }
     
     /* Enhanced data tables */
@@ -191,7 +195,7 @@ def apply_custom_css():
     
     /* Enhanced buttons */
     .stButton > button {
-        background: var(--gradient-bg);
+        background: var(--gradient-bg-4);
         color: white;
         border: none;
         border-radius: 12px;
@@ -205,28 +209,28 @@ def apply_custom_css():
     .stButton > button:hover {
         transform: translateY(-2px);
         box-shadow: var(--hover-shadow);
-        background: linear-gradient(135deg, #5a67d8 0%, #667eea 100%);
+        background: var(--gradient-bg-2);
     }
     
     /* Style navigation buttons with main heading background */
     .stButton > button {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        background: var(--gradient-bg-2) !important;
         color: #ffffff !important;
         border: none !important;
         border-radius: 12px !important;
         padding: 0.75rem 1.5rem !important;
         font-weight: 600 !important;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.3) !important;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+        box-shadow: var(--card-shadow) !important;
         transition: all 0.3s ease !important;
         width: 100% !important;
         margin: 0.25rem 0 !important;
     }
     
     .stButton > button:hover {
-        background: linear-gradient(135deg, #5a67d8 0%, #667eea 100%) !important;
+        background: var(--gradient-bg-4) !important;
         transform: translateY(-2px) !important;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+        box-shadow: var(--hover-shadow) !important;
         color: #ffffff !important;
         font-weight: 700 !important;
     }
@@ -419,7 +423,7 @@ def apply_custom_css():
     
     /* Enhanced sidebar */
     .css-1d391kg {
-        background: linear-gradient(180deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
+        background: var(--gradient-bg-6);
         backdrop-filter: var(--backdrop-blur);
         border-right: 1px solid rgba(255, 255, 255, 0.2);
     }
@@ -946,9 +950,9 @@ apply_custom_css()
 # Enhanced Sidebar Navigation
 with st.sidebar:
     st.markdown("""
-    <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; margin-bottom: 2rem;">
-        <h2 style="color: white; margin: 0;">🏥 Pharma Analytics</h2>
-        <p style="color: white; margin: 0.5rem 0 0 0; opacity: 0.9;">AI-Powered Sales Forecasting</p>
+    <div style="text-align: center; padding: 1rem; background: var(--gradient-bg-2); border-radius: 15px; margin-bottom: 2rem; box-shadow: var(--card-shadow); border: 1px solid rgba(255, 255, 255, 0.2);">
+        <h2 style="color: white; margin: 0; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">🏥 Pharma Analytics</h2>
+        <p style="color: white; margin: 0.5rem 0 0 0; opacity: 0.9; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">AI-Powered Sales Forecasting</p>
     </div>
     """, unsafe_allow_html=True)
     
@@ -1272,7 +1276,7 @@ if uploaded_files is not None and len(uploaded_files) > 0:
     # Show combined data summary
     if all_data:
         st.markdown("""
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; border-radius: 15px; margin: 1rem 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid rgba(255, 255, 255, 0.2);">
+        <div style="background: var(--gradient-bg-2); padding: 1.5rem; border-radius: 20px; margin: 1rem 0; box-shadow: var(--card-shadow); border: 1px solid rgba(255, 255, 255, 0.2);">
             <h3 style="color: #ffffff; margin: 0 0 1rem 0; font-weight: 700; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">📊 Combined Data Summary</h3>
         </div>
         """, unsafe_allow_html=True)
@@ -2250,7 +2254,7 @@ if st.session_state.analysis_completed and not df_fcst.empty and st.session_stat
         
         # Model explanations with better visibility
         st.markdown("""
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; border-radius: 15px; margin: 1rem 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid rgba(255, 255, 255, 0.2);">
+        <div style="background: var(--gradient-bg-2); padding: 1.5rem; border-radius: 20px; margin: 1rem 0; box-shadow: var(--card-shadow); border: 1px solid rgba(255, 255, 255, 0.2);">
             <h3 style="color: #ffffff; margin: 0; font-weight: 700; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">📚 Model Explanations</h3>
             <p style="color: #ffffff; margin: 0.5rem 0 0 0; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); opacity: 0.9;">Detailed information about each forecasting model</p>
         </div>
@@ -2355,7 +2359,7 @@ if st.session_state.analysis_completed and not df_fcst.empty and st.session_stat
         
         # Performance insights with better visibility
         st.markdown("""
-        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 1.5rem; border-radius: 15px; margin: 1rem 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid rgba(255, 255, 255, 0.2);">
+        <div style="background: var(--gradient-bg-2); padding: 1.5rem; border-radius: 20px; margin: 1rem 0; box-shadow: var(--card-shadow); border: 1px solid rgba(255, 255, 255, 0.2);">
             <h3 style="color: #ffffff; margin: 0; font-weight: 700; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">💡 Performance Insights</h3>
             <p style="color: #ffffff; margin: 0.5rem 0 0 0; font-weight: 500; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); opacity: 0.9;">Key metrics and analysis of model performance</p>
         </div>
