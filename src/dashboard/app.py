@@ -594,11 +594,29 @@ def apply_custom_css():
         text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
     }
     
-    /* Ensure main heading is always white */
-    .main-header h1,
-    h1 {
-        color: white !important;
+    /* Ensure main heading is always white - highest priority */
+    .main-header h1 {
+        color: #ffffff !important;
         font-weight: 700 !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+    }
+    
+    /* Override any general heading rules for main header */
+    .main .block-container .main-header h1,
+    .stApp .main-header h1,
+    .element-container .main-header h1,
+    div[data-testid="stMarkdownContainer"] .main-header h1 {
+        color: #ffffff !important;
+        font-weight: 700 !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+    }
+    
+    /* Force white color for main header with highest specificity */
+    div.main-header h1[style*="color: white"],
+    div.main-header h1 {
+        color: #ffffff !important;
+        font-weight: 700 !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
     }
     
     .main-header p {
