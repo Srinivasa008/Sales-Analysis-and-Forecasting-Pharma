@@ -581,7 +581,7 @@ def apply_custom_css():
     
     /* Fix section header text */
     .section-header {
-        color: #ffffff !important;
+        color: #000000 !important;
         font-weight: 700 !important;
         background: transparent !important;
         text-shadow: 1px 1px 2px rgba(0,0,0,0.3) !important;
@@ -868,7 +868,7 @@ def apply_custom_css():
     
     
     .stSubheader {
-        color: #000000 !important;
+        color: #ffffff !important;
         font-weight: 700 !important;
     }
     
