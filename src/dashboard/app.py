@@ -866,6 +866,12 @@ def apply_custom_css():
         font-weight: 700 !important;
     }
     
+    /* Override main header h1 to be white */
+    .main-header h1 {
+        color: white !important;
+        -webkit-text-fill-color: white !important;
+    }
+    
     .stSubheader {
         color: #000000 !important;
         font-weight: 700 !important;
@@ -1069,7 +1075,7 @@ with st.sidebar:
 # Enhanced header with gradient background
 st.markdown("""
 <div class="main-header">
-    <h1 style="color: #ffffff !important; font-size: 3rem !important; font-weight: 700 !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important; margin: 0 !important;">🏥 Pharma Sales Forecasting & Inventory Planning</h1>
+    <h1 style="color: white !important; font-size: 3rem !important; font-weight: 700 !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important; margin: 0 !important; -webkit-text-fill-color: white !important;">🏥 Pharma Sales Forecasting & Inventory Planning</h1>
     <p style="color: #ffffff !important; font-size: 1.2rem !important; margin: 0.5rem 0 0 0 !important; text-shadow: 1px 1px 2px rgba(0,0,0,0.5) !important;">Advanced AI-Powered Pharmaceutical Sales Analytics & Smart Inventory Management</p>
 </div>
 """, unsafe_allow_html=True)
