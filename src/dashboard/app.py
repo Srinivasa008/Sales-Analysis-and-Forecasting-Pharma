@@ -1001,8 +1001,9 @@ with st.sidebar:
     
     st.markdown("---")
     
-    # Quick Stats - Only show after files are uploaded
-    if 'uploaded_files' in st.session_state and st.session_state.uploaded_files is not None and len(st.session_state.uploaded_files) > 0:
+    # Quick Stats - Show after files are uploaded OR analysis is completed
+    if (('uploaded_files' in st.session_state and st.session_state.uploaded_files is not None and len(st.session_state.uploaded_files) > 0) or 
+        st.session_state.analysis_completed):
         st.markdown("### 📊 Quick Stats")
         
         # Load data for sidebar stats
